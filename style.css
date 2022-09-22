@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.bg{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(#182848, #4b6cb7);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+nav img{
+    width: 50px;
+    height: 40px;
+}
+.main{
+    margin: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: ghostwhite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards a{
+    text-decoration: none;
+}
+.cards .card{
+    margin: 10px;
+    min-height: 50px;
+    min-width: 100px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: bold;
+    transition: all .4s linear;
+    color: #182848;
+    cursor: pointer;
+}
+.cards .card.active,
+.cards .card:hover{
+    background: linear-gradient(#182848, #4b6cb7);
+    color: #fff;
+     transform: scale(1.1)
+}
+.batches{
+    position: relative;
+}
+.batches .batch{
+    position: absolute;
+    transform: translateX(110%);
+}
+.batches #b_2016{
+    transform: translateX(0%);
+}
+.peoples{
+    margin: 2rem .5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.peoples .people{
+    padding: 10px;
+    display: flex;
+    width: 30%;
+    min-width: 300px;
+    align-items: center;
+    height: 140px;
+    border-radius: 80px;
+    /* background: rgba(255, 255, 255, 0.5); */
+    background: #ffffff;
+    border: 1px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1rem;
+    transition: all .5s linear;
+    position: relative;
+    overflow: hidden;
+}
+.peoples .people::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    transform: skewX(345deg);
+}
+.peoples .people:hover .text .blur{
+    display: flex;
+}
+.peoples .people img.photo{
+    height: 115px;
+    width: 115px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.peoples .people .text p.name{
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+.peoples .people .text .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #264eab;
+    border-radius: 80px;
+    color: #264eab;
+    background: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    text-align: center;
+    cursor: pointer;
+}
+.peoples .people .text span{
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+}
+.peoples .people .text .blur a{
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+.peoples .people .text .blur img.brand{
+    height: 40px;
+}
+.peoples .people .text a{
+    text-decoration: none;
+    color: #182848;
+    cursor: pointer;
+}
+@media (max-width: 530px) {
+    .main{
+        margin: 2rem;
+        padding: 1rem;
+    }
+    .peoples .people{
+        flex-direction: column;
+        height: inherit;
+        min-width: 150px;
+    }
+    .peoples .people img{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .peoples .people .text{
+        text-align: center;
+    }
+    .cards .card {
+        margin: 10px;
+        min-height: 40px;
+        min-width: 60px;
+        line-height: 40px;
+        font-size: .6rem;
+    }
+}
+
+
